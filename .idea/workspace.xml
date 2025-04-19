@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45b30684-1834-4de5-a0f3-b54f4bf77d91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Connection/ConnectionC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-    </list>
+    <list default="true" id="45b30684-1834-4de5-a0f3-b54f4bf77d91" name="Changes" comment="Hola" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +31,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "miguel",
     "kotlin-language-version-configured": "true",
@@ -49,6 +47,20 @@
       <option name="presentableId" value="Default" />
       <updated>1745022710851</updated>
     </task>
+    <task id="LOCAL-00001" summary="Hola">
+      <option name="closed" value="true" />
+      <created>1745022849216</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745022849216</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Hola" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hola" />
   </component>
 </project>
