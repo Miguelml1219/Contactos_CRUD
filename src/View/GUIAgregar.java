@@ -4,6 +4,7 @@ import Controller.ContactosDAO;
 import Model.Contactos;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Date;
@@ -24,9 +25,12 @@ public class GUIAgregar {
 
     public GUIAgregar(ContactosGUI contactosGUI) {
         this.contactosGUI = contactosGUI;
+        agregarButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        cancelarButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         LocalDate today = LocalDate.now();
         textField4.setText(today.toString());
+        textField4.setEditable(false);
         agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,16 +42,16 @@ public class GUIAgregar {
 
                 Contactos contactos = new Contactos(0, nombre,telefono,correo,fecha);
                 contactosDAO.agregar(contactos);
-
                 contactosGUI.listaContacto();
                 limpiar();
 
+            }
+        });
 
-
-
-
-
-
+        cancelarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ((JFrame) SwingUtilities.getWindowAncestor(cancelarButton)).dispose();
 
             }
         });
@@ -71,7 +75,7 @@ public class GUIAgregar {
         frame.setContentPane(this.main);
 //          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setSize(500,250);
+        frame.setSize(390,320);
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
     }

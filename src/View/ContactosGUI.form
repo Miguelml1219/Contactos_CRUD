@@ -69,7 +69,7 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-5524801"/>
+              <background color="-8288624"/>
               <font name="Marlett" size="14" style="1"/>
               <foreground color="-1"/>
               <text value="➕"/>
@@ -93,7 +93,7 @@
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-5524801"/>
+              <background color="-8288624"/>
               <font name="Marlett" size="14" style="1"/>
               <foreground color="-1"/>
               <text value="🔍"/>

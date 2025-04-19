@@ -5,6 +5,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,6 +32,7 @@ public class ContactosGUI {
 
         agregar.setCursor(new Cursor(Cursor.HAND_CURSOR));
         buscar.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        table1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
 
         agregar.addActionListener(new ActionListener() {
@@ -40,6 +43,20 @@ public class ContactosGUI {
                 guiAgregar.ejecutar();
 
 
+            }
+        });
+
+        table1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if(e.getClickCount()==2 && table1.getSelectedRow()!= -1)
+                {
+                    int selectedRow = table1.getSelectedRow();
+                    String name = (String) table1.getValueAt(selectedRow,1);
+
+                    ListaContactoGUI listaContactoGUI = new ListaContactoGUI(name);
+                    listaContactoGUI.runDetail();
+                }
             }
         });
     }
