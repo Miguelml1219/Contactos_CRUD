@@ -3,11 +3,14 @@ package View;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import Connection.ConnectionC;
+import Model.Contactos;
 
 
 public class ContactosGUI {
@@ -21,7 +24,7 @@ public class ContactosGUI {
     private ConnectionC connectionC = new ConnectionC();
 
 
-    public ContactosGUI(JFrame frame)
+    public ContactosGUI()
     {
         listaContacto();
 
@@ -29,6 +32,16 @@ public class ContactosGUI {
         buscar.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
 
+        agregar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                GUIAgregar guiAgregar = new GUIAgregar(ContactosGUI.this);
+                guiAgregar.ejecutar();
+
+
+            }
+        });
     }
 
     public void listaContacto()
@@ -92,12 +105,19 @@ public class ContactosGUI {
     }
 
 
+    public class NonEditableTableModel extends DefaultTableModel {
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false;
+        }
     }
+
+
 
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Data Base Contact");
-        ContactosGUI contactosGUI = new ContactosGUI(frame); // Se pasa el frame al constructor de Menu
+        ContactosGUI contactosGUI = new ContactosGUI(); // Se pasa el frame al constructor de Menu
         frame.setContentPane(contactosGUI.main);
 //          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

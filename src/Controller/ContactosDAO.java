@@ -26,7 +26,7 @@ public class ContactosDAO {
             pst.setString(1, contactos.getNombre());
             pst.setString(2, contactos.getTelefono());
             pst.setString(3, contactos.getCorreo());
-            pst.setDate(4, contactos.getFecha_creacio());
+            pst.setString(4, contactos.getFecha_creacion());
 
             int resultado = pst.executeUpdate();
             return resultado > 0;
