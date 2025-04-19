@@ -6,8 +6,8 @@ public class Contactos {
     //atributos
 
     int id_contacto;
-    String nombre, telefono, correo;
-    Date fecha_creacion;
+    String nombre, telefono, correo, fecha_creacion;
+
 
     public int getId_contacto() {
         return id_contacto;
@@ -41,15 +41,15 @@ public class Contactos {
         this.correo = correo;
     }
 
-    public java.sql.Date getFecha_creacio() {
-        return (java.sql.Date) fecha_creacion;
+    public String getFecha_creacion() {
+        return  fecha_creacion;
     }
 
-    public void setFecha_creacio(Date fecha_creacio) {
-        this.fecha_creacion = fecha_creacio;
+    public void setFecha_creacion(String fecha_creacion) {
+        this.fecha_creacion = fecha_creacion;
     }
 
-    public Contactos(int id_contacto, String nombre, String telefono, String correo, Date fecha_creacion) {
+    public Contactos(int id_contacto, String nombre, String telefono, String correo, String fecha_creacion) {
         this.id_contacto = id_contacto;
         this.nombre = nombre;
         this.telefono = telefono;
