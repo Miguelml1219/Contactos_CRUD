@@ -64,7 +64,7 @@ public class ContactosDAO {
         }
     }
 // metodo eliminar
-    public void eliminarClientes(int id) {
+    public void eliminar(int id) {
         Connection con = ConnectionC.getConnection();
         String query = "DELETE FROM contactos WHERE id_contacto = ?";
 
