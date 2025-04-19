@@ -11,6 +11,11 @@ public class ContactosGUI {
     public ContactosGUI(JFrame frame)
     {
 
+
+
+
+
+
     }
 
     public static void main(String[] args) {

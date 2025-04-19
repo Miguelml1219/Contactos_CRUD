@@ -1,6 +1,5 @@
 package Model;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Contactos {
@@ -42,8 +41,8 @@ public class Contactos {
         this.correo = correo;
     }
 
-    public Date getFecha_creacio() {
-        return fecha_creacion;
+    public java.sql.Date getFecha_creacio() {
+        return (java.sql.Date) fecha_creacion;
     }
 
     public void setFecha_creacio(Date fecha_creacio) {
