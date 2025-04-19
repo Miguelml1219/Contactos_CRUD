@@ -4,6 +4,8 @@ import javax.swing.*;
 
 public class ContactosGUI {
 
+
+
     private JPanel main;
 
     public ContactosGUI(JFrame frame)
@@ -22,5 +24,6 @@ public class ContactosGUI {
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
     }
+
 
 }
