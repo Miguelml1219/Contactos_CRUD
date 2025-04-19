@@ -12,6 +12,8 @@ import Connection.ConnectionC;
 
 public class ContactosGUI {
 
+
+
     private JPanel main;
     private JTable table1;
     private JButton agregar;
@@ -90,11 +92,6 @@ public class ContactosGUI {
     }
 
 
-    public class NonEditableTableModel extends DefaultTableModel {
-        @Override
-        public boolean isCellEditable(int row, int column) {
-            return false;
-        }
     }
 
     public static void main(String[] args) {
@@ -108,5 +105,6 @@ public class ContactosGUI {
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
     }
+
 
 }
