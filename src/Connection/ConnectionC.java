@@ -10,7 +10,7 @@ public class ConnectionC {
         Connection connection= null;
 
         try {
-                connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
+                connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/contactos","root","");
         }
         catch (Exception e)
         {
